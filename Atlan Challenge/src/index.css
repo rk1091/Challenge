@@ -27,7 +27,19 @@ body {
   flex-direction: column;
   width: 100%;
 }
+.run-query {
+  display: flex;
+  justify-content: end;
 
+  /* background-color: rgb(146, 145, 145); */
+}
+button {
+  background-color: rgb(16, 148, 16);
+  color: antiquewhite;
+  padding: 7px;
+  border-radius: 12px;
+  font-weight: bold;
+}
 .editor {
   height: 50vh;
   /* background-color: #4db0d1; */
@@ -36,6 +48,6 @@ body {
 }
 .editor2 {
   height: 50vh;
-  background-color: #a93636;
-  color: #fff;
+  color: #a93636;
+  background-color: #fff;
 }

@@ -13,6 +13,9 @@ function App() {
         <div className="parent">
           <div className="editor">
             <div className="um">
+              <div className="run-query">
+                <button>Run Queries</button>
+              </div>
               Click a session to display or start typing queries to create a
               session...
             </div>
