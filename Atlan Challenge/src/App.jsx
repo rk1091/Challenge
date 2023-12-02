@@ -12,13 +12,12 @@ function App() {
         </div>
         <div className="parent">
           <div className="editor">
-            <div className="um">
-              <div className="run-query">
-                <button>Run Queries</button>
-              </div>
-              Click a session to display or start typing queries to create a
-              session...
+            <div className="run-query">
+              <button>Run Queries</button>
             </div>
+            <textarea
+              className="um"
+              placeholder="Click a session to display or start typing queries to create a session..."></textarea>
           </div>
           <div className="editor2">
             <h1>hi</h1>
