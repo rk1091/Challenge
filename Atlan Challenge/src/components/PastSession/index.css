@@ -1,0 +1,16 @@
+.session-list {
+  & .session-list-item {
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 20px 20px;
+    margin: 0 10px;
+    color: white;
+    & input {
+      color: inherit;
+      border: none;
+      outline: none;
+      background: transparent;
+    }
+  }
+}

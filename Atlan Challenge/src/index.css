@@ -15,8 +15,6 @@ body {
   /* background-color: black; */
   background-color: rgb(22, 26, 48);
   color: #fff;
-  display: grid;
-  text-align: center;
 }
 .um {
   /* margin-top: 5px; */
@@ -38,7 +36,7 @@ body {
   padding: 5px;
   /* background-color: rgb(146, 145, 145); */
 }
-button {
+.default-button {
   background-color: rgb(16, 148, 16);
   /* background-color: rgb(49, 48, 77); */
   /* color: antiquewhite; */
