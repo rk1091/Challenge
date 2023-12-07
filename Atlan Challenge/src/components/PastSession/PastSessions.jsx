@@ -1,4 +1,3 @@
-import useSessions from "../../hooks/useSesstion";
 import "./index.css";
 
 export default function PastSessions({
@@ -6,7 +5,7 @@ export default function PastSessions({
   addSession,
   removeSession,
   updateSession,
-  setCurrentSession,
+  setCurrentSessionIndex,
 }) {
   return (
     <div
@@ -21,7 +20,7 @@ export default function PastSessions({
             justifyContent: "space-between",
           }}
           className="session-list-item"
-          onClick={() => setCurrentSession(i)}
+          onClick={() => setCurrentSessionIndex(i)}
         >
           <input
             onChange={(e) => {

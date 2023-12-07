@@ -1,6 +1,9 @@
+import { useMemo } from "react";
 import PastSessions from "./components/PastSession/PastSessions";
+import Result from "./components/Result/Result";
 import useSessions from "./hooks/useSesstion";
 import "./index.css";
+import { ResultMap } from "./util/data";
 
 function App() {
   const {
@@ -8,17 +11,32 @@ function App() {
     addSession,
     removeSession,
     updateSession,
-    currentSession,
-    setCurrentSession,
+    currentSessionIndex,
+    setCurrentSessionIndex,
   } = useSessions();
 
   const onQueryChange = (e) => {
-    const id = sessions[currentSession].id;
+    const id = sessions[currentSessionIndex].id;
     if (!id) {
       console.error("no current session");
       return;
     }
     updateSession(id, { query: e.target.value });
+  };
+
+  const selectedSession = useMemo(() => {
+    return sessions[currentSessionIndex];
+  }, [sessions, currentSessionIndex]);
+
+  const runQuery = () => {
+    if (selectedSession.resultId) {
+      return;
+    }
+
+    const keys = Object.keys(ResultMap);
+    const resultId = Math.floor(Math.random() * keys.length) + 1;
+    console.log(resultId);
+    updateSession(selectedSession.id, { resultId });
   };
 
   return (
@@ -39,7 +57,7 @@ function App() {
             SQL Editor
           </h2>
           <PastSessions
-            setCurrentSession={setCurrentSession}
+            setCurrentSessionIndex={setCurrentSessionIndex}
             sessions={sessions}
             addSession={addSession}
             removeSession={removeSession}
@@ -50,17 +68,25 @@ function App() {
         <div className="parent">
           <div className="editor">
             <div className="run-query">
-              <button className="default-button">Run Queries</button>
+              <button onClick={runQuery} className="default-button">
+                Run Queries
+              </button>
             </div>
             <textarea
               onChange={onQueryChange}
-              value={sessions[currentSession]?.query ?? ""}
+              value={selectedSession?.query ?? ""}
               className="um"
               placeholder="Click a session to display or start typing queries to create a session..."
             ></textarea>
           </div>
           <div className="editor2">
-            <h1>hi</h1>
+            {selectedSession &&
+            selectedSession.resultId &&
+            ResultMap[selectedSession.resultId] ? (
+              <Result data={ResultMap[selectedSession.resultId]} />
+            ) : (
+              <div> No data</div>
+            )}
           </div>
         </div>
       </div>

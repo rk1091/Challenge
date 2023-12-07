@@ -6,7 +6,7 @@ import {
 
 export default function useSessions() {
   const [sessions, setSessions] = useState([]);
-  const [currentSession, setCurrentSession] = useState(0);
+  const [currentSessionIndex, setCurrentSessionIndex] = useState(0);
 
   useEffect(() => {
     const sessions = JSON.parse(
@@ -14,9 +14,9 @@ export default function useSessions() {
     );
     if (sessions?.length) {
       setSessions(sessions);
-      setCurrentSession(sessions.length - 1);
+      setCurrentSessionIndex(sessions.length - 1);
     } else {
-      setCurrentSession(DEFAULT_SESSION_STATE.length - 1);
+      setCurrentSessionIndex(DEFAULT_SESSION_STATE.length - 1);
       updateState(DEFAULT_SESSION_STATE);
     }
   }, []);
@@ -33,7 +33,7 @@ export default function useSessions() {
     const newSession = { name, query, id, time: Date.now() };
     // const newSessions = [...state, ];
     updateState([...sessions, newSession]);
-    setCurrentSession(sessions.length);
+    setCurrentSessionIndex(sessions.length);
     return newSession;
   };
 
@@ -54,7 +54,7 @@ export default function useSessions() {
     addSession,
     updateSession,
     removeSession,
-    currentSession,
-    setCurrentSession,
+    currentSessionIndex,
+    setCurrentSessionIndex,
   };
 }
