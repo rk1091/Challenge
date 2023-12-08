@@ -13,17 +13,49 @@ body {
   width: 250px;
   /* background-color: #333; */
   /* background-color: black; */
-  background-color: rgb(22, 26, 48);
+  /* background-color: rgb(22, 26, 48); */
+  /* background-color: rgb(9, 38, 53); */
+  background-color: rgb(30, 3, 73);
   color: #fff;
 }
-.um {
+.mainArea {
+  display: flex;
+}
+.mainQuery {
   /* margin-top: 5px; */
+  color: white;
   margin-left: 10px;
-  color: rgb(146, 145, 145);
+  margin-right: 10px;
+  /* color: rgb(146, 145, 145); */
   background-color: transparent;
-  height: 70%;
-  width: 90%;
+  height: 30vh;
+  width: 75%;
   font-family: "Segoe UI";
+  border-color: rgb(237, 243, 237);
+  border-radius: 6px;
+  border-width: 1px;
+}
+.queryBuilder {
+  color: white;
+  background-color: transparent;
+  height: 20vh;
+  /* width: 90%; */
+  padding: 5px;
+  align-self: center;
+  font-family: "Segoe UI";
+  border-color: rgb(237, 243, 237);
+  border-radius: 10px;
+  border-width: 2px;
+}
+.mainQuery:hover,
+.queryBuilder:hover {
+  /* background-color: rgb(52, 114, 114); */
+  background-color: rgb(194, 217, 255);
+  color: black;
+}
+.default-button:hover {
+  background-color: rgb(194, 217, 255);
+  color: black;
 }
 .parent {
   display: flex;
@@ -37,10 +69,14 @@ body {
   /* background-color: rgb(146, 145, 145); */
 }
 .default-button {
-  background-color: rgb(16, 148, 16);
+  /* background-color: rgb(92, 131, 116); */
+  /* background-color: rgb(16, 148, 16); */
   /* background-color: rgb(49, 48, 77); */
+  /* background-color: rgb(83, 5, 151); */
+  background-color: rgb(142, 143, 250);
   /* color: antiquewhite; */
-  color: rgb(249, 248, 246);
+  /* color: rgb(249, 248, 246); */
+  color: white;
   padding: 7px;
   margin-bottom: 10px;
   border-radius: 12px;
@@ -50,12 +86,15 @@ body {
   height: 50vh;
   /* background-color: #4db0d1; */
   /* background-color: rgb(56, 56, 68); */
-  background-color: rgb(49, 48, 77);
+  /* background-color: rgb(49, 48, 77); */
+  /* background-color: rgb(27, 66, 66); */
+  background-color: rgb(119, 82, 254);
+
   color: #fff;
 }
 .editor2 {
   height: 50vh;
-  color: #a93636;
+  /* color: #a93636; */
   /* background-color: silver; */
   background-color: (182, 187, 196);
 }
