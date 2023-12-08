@@ -23,27 +23,33 @@ body {
 }
 .mainQuery {
   /* margin-top: 5px; */
-  color: white;
+  /* background-color: transparent;
+  color: white; */
+  /* background-color: rgb(243, 225, 254); */
+  background-color: white;
+  border-color: black;
+  /* background-color: rgb(142, 143, 250); */
+  color: black;
   margin-left: 10px;
   margin-right: 10px;
   /* color: rgb(146, 145, 145); */
-  background-color: transparent;
   height: 30vh;
   width: 75%;
   font-family: "Segoe UI";
-  border-color: rgb(237, 243, 237);
+  /* border-color: rgb(237, 243, 237); */
   border-radius: 6px;
-  border-width: 1px;
+  border-width: 2px;
 }
 .queryBuilder {
-  color: white;
-  background-color: transparent;
+  color: black;
+  /* background-color: transparent; */
   height: 20vh;
   /* width: 90%; */
   padding: 5px;
   align-self: center;
   font-family: "Segoe UI";
-  border-color: rgb(237, 243, 237);
+  /* border-color: rgb(237, 243, 237); */
+  border-color: black;
   border-radius: 10px;
   border-width: 2px;
 }
@@ -88,7 +94,8 @@ body {
   /* background-color: rgb(56, 56, 68); */
   /* background-color: rgb(49, 48, 77); */
   /* background-color: rgb(27, 66, 66); */
-  background-color: rgb(119, 82, 254);
+  /* background-color: rgb(119, 82, 254); */
+  background-color: antiquewhite;
 
   color: #fff;
 }
@@ -96,5 +103,6 @@ body {
   height: 50vh;
   /* color: #a93636; */
   /* background-color: silver; */
-  background-color: (182, 187, 196);
+  background-color: antiquewhite;
+  /* background-color: (182, 187, 196); */
 }

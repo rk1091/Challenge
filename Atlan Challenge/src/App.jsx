@@ -150,7 +150,13 @@ function App() {
                   display: "flex",
                   flexDirection: "column",
                 }}>
-                <center style={{ margin: "10px" }}>QueryBuilder:</center>
+                <center
+                  style={{
+                    margin: "10px",
+                    color: "black",
+                  }}>
+                  QueryBuilder:
+                </center>
                 <textarea
                   // style={{
                   //   // display: "flex",

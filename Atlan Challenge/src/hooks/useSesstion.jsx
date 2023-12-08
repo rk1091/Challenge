@@ -50,7 +50,7 @@ export default function useSessions() {
   };
 
   return {
-    sessions: sessions,
+    sessions,
     addSession,
     updateSession,
     removeSession,
