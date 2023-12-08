@@ -56,11 +56,11 @@ body {
 .mainQuery:hover,
 .queryBuilder:hover {
   /* background-color: rgb(52, 114, 114); */
-  background-color: rgb(194, 217, 255);
+  background-color: rgb(231, 218, 254);
   color: black;
 }
 .default-button:hover {
-  background-color: rgb(194, 217, 255);
+  background-color: rgb(231, 218, 254);
   color: black;
 }
 .parent {
