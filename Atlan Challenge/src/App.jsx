@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import PastSessions from "./components/PastSession/PastSessions";
 import Result from "./components/Result/Result";
 import useSessions from "./hooks/useSesstion";
@@ -6,8 +6,6 @@ import "./index.css";
 import { ResultMap } from "./util/data";
 
 function App() {
-  // const [fli, setFli] = useState(false);
-  const [count, setCount] = useState(0);
   const [queryBuilder, setQueryBuilder] = useState("");
   const [flip, setFlip] = useState(false);
   const {
@@ -19,12 +17,6 @@ function App() {
     setCurrentSessionIndex,
   } = useSessions();
 
-  // useEffect(() => {
-  //   // Update count when the query changes
-  //   const c = queryBuilder.split(";").length - 1;
-  //   setCount(c > 0 ? c : 0);
-  // }, [flip2]);
-
   const onQueryBuilderChange = (e) => {
     setQueryBuilder(e.target.value);
     // setQueryBuilder(queryBuilder);
@@ -35,15 +27,7 @@ function App() {
       console.error("no current session");
       return;
     }
-    // let c = 0;
-    // console.log("HI");
-    // for (let i = 0; i < e.target.value.length; i++) {
-    //   if (e.target.value[i] == ";") c++;
-    // }
-    // console.log(c);
-    // setCount(c);
-    const c = e.target.value.split(";").length - 1;
-    setCount(c > 0 ? c : 0);
+
     updateSession(id, { query: e.target.value });
   };
 
@@ -52,15 +36,23 @@ function App() {
   }, [sessions, currentSessionIndex]);
 
   const runQuery = () => {
-    // setFli((e) => !e);
-    if (selectedSession.resultId) {
-      return;
+    const queries = selectedSession.query.split(";");
+    let resultToFetch = queries.length - selectedSession.resultIds.length;
+    if (queries[queries.length - 1].trim() === "") {
+      resultToFetch--;
     }
+    let resultIds = [...selectedSession.resultIds];
+    if (resultToFetch < 0) {
+      resultIds = resultIds.slice(0, resultIds.length + resultToFetch);
+    } else
+      while (resultToFetch--) {
+        const keys = Object.keys(ResultMap);
+        const resultId = Math.floor(Math.random() * keys.length) + 1;
+        resultIds.push(resultId);
+      }
 
-    const keys = Object.keys(ResultMap);
-    const resultId = Math.floor(Math.random() * keys.length) + 1;
-    console.log(resultId);
-    updateSession(selectedSession.id, { resultId });
+    // console.log(resultId);
+    updateSession(selectedSession.id, { resultIds });
   };
 
   const assignMainQuery = () => {
@@ -199,11 +191,10 @@ function App() {
             </div>
           </div>
           <div className="editor2">
-            {selectedSession &&
-            selectedSession.resultId &&
-            ResultMap[selectedSession.resultId] ? (
-              // for (let i = 0; i < count; i++) {
-              <Result data={ResultMap[selectedSession.resultId]} />
+            {selectedSession && selectedSession.resultIds.length ? (
+              selectedSession.resultIds.map((id) => (
+                <Result key={id} data={ResultMap[id]} />
+              ))
             ) : (
               <div> No data</div>
             )}

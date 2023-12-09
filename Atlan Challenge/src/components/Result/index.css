@@ -1,4 +1,4 @@
-.table {
+.result-table {
   /* background-color: aquamarine; */
   /* border: 1px dotted black; */
   background-color: white;
@@ -8,4 +8,6 @@
   border-color: rgb(0, 0, 0);
   margin: 10px;
   padding: 10px;
+  width: 100%;
+  overflow: hidden;
 }

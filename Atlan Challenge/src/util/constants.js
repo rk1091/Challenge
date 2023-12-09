@@ -5,13 +5,13 @@ export const DEFAULT_SESSION_STATE = [
     name: "Session 1 ",
     query: "Query 1",
     time: null,
-    resultId: 1,
+    resultIds: [1],
   },
   {
     id: 2,
     name: "Session 2 ",
     query: "Query 2",
     time: null,
-    resultId: 2,
+    resultIds: [2],
   },
 ];

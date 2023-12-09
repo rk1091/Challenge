@@ -30,7 +30,7 @@ export default function useSessions() {
   const addSession = (query, name = "Untitiled") => {
     //TODO: create uuid?
     const id = sessions[sessions.length - 1].id + 1;
-    const newSession = { name, query, id, time: Date.now() };
+    const newSession = { name, query, id, time: Date.now(), resultIds: [] };
     // const newSessions = [...state, ];
     updateState([...sessions, newSession]);
     setCurrentSessionIndex(sessions.length);

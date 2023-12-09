@@ -1,3 +1,4 @@
+import DeleteIcon from "./DeleteIcon";
 import "./index.css";
 
 export default function PastSessions({
@@ -23,19 +24,32 @@ export default function PastSessions({
           onClick={() => setCurrentSessionIndex(i)}
         >
           <input
+            style={{
+              width: "80%",
+            }}
             onChange={(e) => {
               console.log("session id", session.id);
               updateSession(session.id, { name: e.target.value });
             }}
             value={session.name}
           />
-          <button onClick={() => removeSession(session.id)}>cl</button>
+          <div
+            style={{
+              cursor: "pointer",
+            }}
+            onClick={() => removeSession(session.id)}
+          >
+            <DeleteIcon />
+          </div>
         </div>
       ))}
 
       <button
         onClick={() => {
           addSession(null);
+        }}
+        style={{
+          cursor: "pointer",
         }}
         className="session-list-item"
       >
