@@ -6,7 +6,7 @@ import "./index.css";
 import { ResultMap } from "./util/data";
 
 function App() {
-  const [fli, setFli] = useState(false);
+  // const [fli, setFli] = useState(false);
   const [count, setCount] = useState(0);
   const [queryBuilder, setQueryBuilder] = useState("");
   const [flip, setFlip] = useState(false);
@@ -52,7 +52,7 @@ function App() {
   }, [sessions, currentSessionIndex]);
 
   const runQuery = () => {
-    setFli((e) => !e);
+    // setFli((e) => !e);
     if (selectedSession.resultId) {
       return;
     }
@@ -146,6 +146,7 @@ function App() {
                 className="mainQuery"
                 placeholder="Click a session to display or start typing queries to create a session..."></textarea>
               <div
+                className="qbparent"
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -201,10 +202,8 @@ function App() {
             {selectedSession &&
             selectedSession.resultId &&
             ResultMap[selectedSession.resultId] ? (
-              Array.from({ length: count }).map((_, i) => (
-                // for (let i = 0; i < count; i++) {
-                <Result key={i} data={ResultMap[selectedSession.resultId]} />
-              ))
+              // for (let i = 0; i < count; i++) {
+              <Result data={ResultMap[selectedSession.resultId]} />
             ) : (
               <div> No data</div>
             )}

@@ -15,7 +15,8 @@ body {
   /* background-color: black; */
   /* background-color: rgb(22, 26, 48); */
   /* background-color: rgb(9, 38, 53); */
-  background-color: rgb(30, 3, 73);
+  /* background-color: rgb(30, 3, 73); */
+  background-color: rgb(70, 19, 117);
   color: #fff;
 }
 .mainArea {
@@ -60,7 +61,8 @@ body {
   color: black;
 }
 .default-button:hover {
-  background-color: rgb(231, 218, 254);
+  /* background-color: rgb(231, 218, 254); */
+  background-color: plum;
   color: black;
 }
 .parent {
@@ -73,6 +75,16 @@ body {
   justify-content: end;
   padding: 5px;
   /* background-color: rgb(146, 145, 145); */
+}
+.qbparent {
+  background-color: rgb(240, 207, 252);
+  margin: 5px;
+  padding: 10px;
+  margin-right: 0px;
+  border-color: rgb(27, 27, 27);
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
 }
 .default-button {
   /* background-color: rgb(92, 131, 116); */
