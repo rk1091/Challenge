@@ -23,4 +23,3 @@
 
 ## 4. Link to live project: https://atlan-challenge.riyakapoor.tech/
 
-###### Credits By: Riya Kapoor
