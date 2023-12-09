@@ -15,7 +15,7 @@ export const DEFAULT_SESSION_STATE = [
     resultIds: [2, 3],
   },
   {
-    id: 2,
+    id: 3,
     name: "Session 3 ",
     query: "Select * from orders where shipCountry;",
     time: null,

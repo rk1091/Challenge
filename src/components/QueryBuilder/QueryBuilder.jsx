@@ -5,7 +5,7 @@ export default function QueryBuilder({ updateSession, selectedSession }) {
     select: "",
     from: "",
     where: "",
-    "group by": "",
+    group_by: "",
     having: "",
   });
 
@@ -35,7 +35,13 @@ export default function QueryBuilder({ updateSession, selectedSession }) {
       outputstring += ";";
       updateSession(id, { query: outputstring });
     }
-    setQueryData({ select: "", from: "", where: "", group_by: "", having: "" });
+    setQueryData({
+      select: "",
+      from: "",
+      where: "",
+      group_by: "",
+      having: "",
+    });
   };
 
   return (
@@ -92,7 +98,7 @@ export default function QueryBuilder({ updateSession, selectedSession }) {
           <input
             className="queryInput"
             type="text"
-            name="group by"
+            name="group_by"
             placeholder="Column Name"
             onChange={onQueryDataChange}
             value={queryData.group_by}
