@@ -15,11 +15,6 @@ body {
   width: 20%;
   min-width: 250px;
   overflow-y: auto;
-  /* background-color: #333; */
-  /* background-color: black; */
-  /* background-color: rgb(22, 26, 48); */
-  /* background-color: rgb(9, 38, 53); */
-  /* background-color: rgb(30, 3, 73); */
   background-color: rgb(70, 19, 117);
   color: #fff;
 }
@@ -27,22 +22,14 @@ body {
   display: flex;
 }
 .mainQuery {
-  /* margin-top: 5px; */
-  /* background-color: transparent;
-  color: white; */
-  /* background-color: rgb(243, 225, 254); */
   background-color: white;
   border-color: black;
-  /* background-color: rgb(142, 143, 250); */
   color: black;
   margin-left: 10px;
   margin-right: 10px;
-  /* color: rgb(146, 145, 145); */
-  /* background-color: transparent; */
   height: 30vh;
   width: 80%;
   font-family: "Segoe UI";
-  /* border-color: rgb(237, 243, 237); */
   border-radius: 6px;
   border-width: 2px;
 }
@@ -52,46 +39,34 @@ body {
   height: 23vh;
   width: 90%;
   padding: 10px;
-  /* padding-top: 10px; */
-  /* margin-top: 5px; */
   align-self: center;
   font-family: "Segoe UI";
-  /* border-color: rgb(237, 243, 237); */
   border-color: black;
   border-width: 2px;
   border-radius: 10px;
 }
 .queryInput {
   color: black;
-  /* background-color: white; */
-  /* height: 20vh; */
   width: 60%;
   padding: 5px;
   margin-left: 5px;
   margin-top: 5px;
   align-self: center;
-  /* font-family: "Segoe UI"; */
-  /* border-color: rgb(237, 243, 237); */
-  /* border-color: black; */
   border-radius: 10px;
-  /* border-width: 1px; */
 }
-/* .queryBuilder:hover , */
+
 .mainQuery:hover,
 .queryInput:hover {
-  /* background-color: rgb(52, 114, 114); */
   background-color: rgb(231, 218, 254);
   color: black;
 }
 .default-button:hover {
-  /* background-color: rgb(231, 218, 254); */
   background-color: plum;
   color: black;
 }
 .parent {
   display: flex;
   flex-direction: column;
-  /* width: 75%; */
   flex-grow: 1;
 
   height: 100%;
@@ -101,7 +76,6 @@ body {
   display: flex;
   justify-content: end;
   padding: 5px;
-  /* background-color: rgb(146, 145, 145); */
 }
 .qbparent {
   width: 30%;
@@ -109,20 +83,13 @@ body {
   margin: 10px;
   margin-top: 0px;
   padding: 10px;
-  /* margin-right: 0px; */
   border-color: rgb(27, 27, 27);
   border-radius: 10px;
   border-width: 2px;
   border-style: solid;
 }
 .default-button {
-  /* background-color: rgb(92, 131, 116); */
-  /* background-color: rgb(16, 148, 16); */
-  /* background-color: rgb(49, 48, 77); */
-  /* background-color: rgb(83, 5, 151); */
   background-color: rgb(142, 143, 250);
-  /* color: antiquewhite; */
-  /* color: rgb(249, 248, 246); */
   color: white;
   padding: 7px;
   margin-bottom: 10px;
@@ -131,11 +98,6 @@ body {
 }
 .editor {
   height: 50%;
-  /* background-color: #4db0d1; */
-  /* background-color: rgb(56, 56, 68); */
-  /* background-color: rgb(49, 48, 77); */
-  /* background-color: rgb(27, 66, 66); */
-  /* background-color: rgb(119, 82, 254); */
   background-color: antiquewhite;
 
   color: #fff;
@@ -143,8 +105,5 @@ body {
 .editor2 {
   height: 50%;
   overflow: auto;
-  /* color: #a93636; */
-  /* background-color: silver; */
   background-color: antiquewhite;
-  /* background-color: (182, 187, 196); */
 }

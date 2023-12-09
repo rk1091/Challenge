@@ -21,17 +21,20 @@ export default function useSessions() {
     }
   }, []);
 
-  //TODO: add callback ?
   const updateState = (value) => {
     localStorage.setItem(LOCAL_STORAGE_SESSION_KEY, JSON.stringify(value));
     setSessions(value);
   };
 
-  const addSession = (query, name = "Untitiled") => {
-    //TODO: create uuid?
+  const addSession = (query, name = null) => {
     const id = sessions[sessions.length - 1].id + 1;
-    const newSession = { name, query, id, time: Date.now(), resultIds: [] };
-    // const newSessions = [...state, ];
+    const newSession = {
+      name: new Date().toString(),
+      query,
+      id,
+      time: new Date(),
+      resultIds: [],
+    };
     updateState([...sessions, newSession]);
     setCurrentSessionIndex(sessions.length);
     return newSession;

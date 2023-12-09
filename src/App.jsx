@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import PastSessions from "./components/PastSession/PastSessions";
 import Result from "./components/Result/Result";
 import useSessions from "./hooks/useSesstion";
@@ -72,7 +72,6 @@ function App() {
             removeSession={removeSession}
             updateSession={updateSession}
           />
-          {/* array display and when start typing new obj in array inserted and displayed with date, time maybe? today yesterday 3rd dec , 5pm */}
         </div>
         <div className="parent">
           <div className="editor">

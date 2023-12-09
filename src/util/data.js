@@ -1,4 +1,3 @@
-// TODO: Lazy load this data
 const PRODUCTS_DATA = [
   {
     productID: 1,
