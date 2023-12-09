@@ -37,8 +37,15 @@ export default function Result({ data }) {
   };
   return (
     <div>
-      <button onClick={downloadAsCSV}>Download as CSV</button>
-      <button onClick={downloadAsJSON}>Download as JSON</button>
+      <button
+        className="default-button"
+        onClick={downloadAsCSV}
+        style={{ margin: "5px" }}>
+        Download as CSV
+      </button>
+      <button className="default-button" onClick={downloadAsJSON}>
+        Download as JSON
+      </button>
       <table className="result-table">
         <thead className="tableHead">
           <tr>
